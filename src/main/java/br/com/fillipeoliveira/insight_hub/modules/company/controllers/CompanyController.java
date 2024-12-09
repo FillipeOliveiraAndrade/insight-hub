@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.fillipeoliveira.insight_hub.modules.company.dtos.CompanyDTO;
 import br.com.fillipeoliveira.insight_hub.modules.company.models.entities.Company;
 import br.com.fillipeoliveira.insight_hub.modules.company.services.CompanyService;
+import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ public class CompanyController {
   private CompanyService companyService;
   
   @PostMapping
-  public ResponseEntity<Company> create(@RequestBody CompanyDTO companyDTO) {
+  public ResponseEntity<Company> create(@Valid @RequestBody CompanyDTO companyDTO) {
     Company result = this.companyService.save(companyDTO.toEntity());
     return ResponseEntity.status(HttpStatus.CREATED).body(result);
   }
