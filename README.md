@@ -6,11 +6,11 @@ Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços
 ---
 
 ## Fase 1: Planejamento e Estrutura Inicial
-- [ ] Definir a arquitetura do sistema.
-- [ ] Planejar o banco de dados (entidades: Usuário, Empresa, Produto/Serviço, Avaliação).
-- [ ] Escolher as tecnologias a serem utilizadas (Spring Boot, React/Vue.js, PostgreSQL, etc.).
-- [ ] Configuração do ambiente de desenvolvimento local.
-- [ ] Criar repositório no GitHub para controle de versão.
+- [x] Definir a arquitetura do sistema.
+- [x] Planejar o banco de dados (entidades: Usuário, Empresa, Produto/Serviço, Avaliação).
+- [x] Escolher as tecnologias a serem utilizadas (Spring Boot, React/Vue.js, PostgreSQL, etc.).
+- [x] Configuração do ambiente de desenvolvimento local.
+- [x] Criar repositório no GitHub para controle de versão.
 
 ---
 
