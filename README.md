@@ -80,4 +80,4 @@ Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços
 ## Diagrama ER
 Este é o diagrama ER do projeto para referência:
 
-![Diagrama ER](resources/diagrams/er_diagram.jpg)
+![Diagrama ER](/src/main/resources/diagrams/er_diagram.jpg)
