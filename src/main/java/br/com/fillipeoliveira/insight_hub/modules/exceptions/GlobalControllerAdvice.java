@@ -11,7 +11,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CnpjAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.EmailAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.NameAlreadyExistsException;
 
 @ControllerAdvice
 public class GlobalControllerAdvice {
@@ -36,7 +38,11 @@ public class GlobalControllerAdvice {
     return new ResponseEntity<>(dto, HttpStatus.BAD_REQUEST);
   }
 
-  @ExceptionHandler(CompanyAlreadyExistsException.class)
+  @ExceptionHandler({
+    CnpjAlreadyExistsException.class,
+    NameAlreadyExistsException.class,
+    EmailAlreadyExistsException.class
+  })
   public ResponseEntity<ErrorMessageDTO> handleCompanyBadRequestException(RuntimeException exception) {
     ErrorMessageDTO error = new ErrorMessageDTO(exception.getMessage(), null);
 
