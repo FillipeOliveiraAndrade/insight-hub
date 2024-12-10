@@ -74,3 +74,10 @@ Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços
 - [ ] Implementar novos recursos conforme necessidades dos usuários.
 - [ ] Explorar formas de monetização (planos premium, taxas por destaque de produtos, etc.).
 - [ ] Continuar aprimorando a plataforma (desempenho, segurança, UX).
+
+---
+
+## Diagrama ER
+Este é o diagrama ER do projeto para referência:
+
+![Diagrama ER](resources/diagrams/er_diagram.jpg)
