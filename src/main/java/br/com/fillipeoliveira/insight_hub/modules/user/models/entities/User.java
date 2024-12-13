@@ -1,4 +1,4 @@
-package br.com.fillipeoliveira.insight_hub.modules.user.models;
+package br.com.fillipeoliveira.insight_hub.modules.user.models.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -15,7 +15,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name = "user")
+@Entity(name = "users")
 @Data
 @Builder
 @AllArgsConstructor
