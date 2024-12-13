@@ -11,9 +11,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CnpjAlreadyExistsException;
-import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.EmailAlreadyExistsException;
-import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.NameAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyCnpjAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyEmailAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyNameAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserEmailAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserNameAlreadyExistsException;
 
 @ControllerAdvice
 public class GlobalControllerAdvice {
@@ -39,9 +41,11 @@ public class GlobalControllerAdvice {
   }
 
   @ExceptionHandler({
-    CnpjAlreadyExistsException.class,
-    NameAlreadyExistsException.class,
-    EmailAlreadyExistsException.class
+    CompanyCnpjAlreadyExistsException.class,
+    CompanyNameAlreadyExistsException.class,
+    CompanyEmailAlreadyExistsException.class,
+    UserNameAlreadyExistsException.class,
+    UserEmailAlreadyExistsException.class
   })
   public ResponseEntity<ErrorMessageDTO> handleCompanyBadRequestException(RuntimeException exception) {
     ErrorMessageDTO error = new ErrorMessageDTO(exception.getMessage(), null);
