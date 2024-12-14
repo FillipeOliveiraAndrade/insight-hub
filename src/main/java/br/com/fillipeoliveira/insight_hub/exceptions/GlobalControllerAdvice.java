@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyCnpjAlreadyExistsException;
 import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyEmailAlreadyExistsException;
 import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyNameAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyNotFoundException;
 import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserEmailAlreadyExistsException;
 import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserNameAlreadyExistsException;
 
@@ -41,6 +42,7 @@ public class GlobalControllerAdvice {
   }
 
   @ExceptionHandler({
+    CompanyNotFoundException.class,
     CompanyCnpjAlreadyExistsException.class,
     CompanyNameAlreadyExistsException.class,
     CompanyEmailAlreadyExistsException.class,
