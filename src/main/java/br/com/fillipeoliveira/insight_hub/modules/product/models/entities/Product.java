@@ -30,6 +30,7 @@ public class Product {
   private UUID id;
 
   private String name;
+  private String category;
   private String description;
 
   // private void images;

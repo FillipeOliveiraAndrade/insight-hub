@@ -16,7 +16,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import br.com.fillipeoliveira.insight_hub.modules.company.models.entities.Company;
 
 @Service
-public class TokenService {
+public class TokenServiceCompany {
   
   @Value("${api.security.token.secret}")
   private String secret;

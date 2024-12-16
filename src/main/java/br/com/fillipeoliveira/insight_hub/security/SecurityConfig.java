@@ -30,6 +30,9 @@ public class SecurityConfig {
     http.csrf(csrf -> csrf.disable())
         .authorizeHttpRequests(auth -> {
           auth.requestMatchers("/auth/company").permitAll()
+              .requestMatchers("/auth/user").permitAll()
+              .requestMatchers("/company").permitAll()
+              .requestMatchers("/user").permitAll()
               .requestMatchers(PERMIT_ALL_LIST).permitAll();
           auth.anyRequest().authenticated();
         })

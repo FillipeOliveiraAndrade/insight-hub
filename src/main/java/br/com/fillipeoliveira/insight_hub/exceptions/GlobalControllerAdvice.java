@@ -17,6 +17,7 @@ import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyName
 import br.com.fillipeoliveira.insight_hub.modules.company.exceptions.CompanyNotFoundException;
 import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserEmailAlreadyExistsException;
 import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserNameAlreadyExistsException;
+import br.com.fillipeoliveira.insight_hub.modules.user.exceptions.UserNotFoundExcepiton;
 
 @ControllerAdvice
 public class GlobalControllerAdvice {
@@ -46,6 +47,8 @@ public class GlobalControllerAdvice {
     CompanyCnpjAlreadyExistsException.class,
     CompanyNameAlreadyExistsException.class,
     CompanyEmailAlreadyExistsException.class,
+
+    UserNotFoundExcepiton.class,
     UserNameAlreadyExistsException.class,
     UserEmailAlreadyExistsException.class
   })

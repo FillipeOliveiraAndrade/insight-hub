@@ -6,11 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fillipeoliveira.insight_hub.modules.company.dtos.AuthCompanyDTO;
+import br.com.fillipeoliveira.insight_hub.modules.company.dtos.AuthCompanyResponseDTO;
 import br.com.fillipeoliveira.insight_hub.modules.company.services.AuthCompanyService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/auth/company")
 public class AuthCompanyController {
@@ -19,8 +23,8 @@ public class AuthCompanyController {
   private AuthCompanyService authCompanyService;
 
   @PostMapping
-  public ResponseEntity<String> login(@RequestBody AuthCompanyDTO authCompanyDTO) {
-    String token = this.authCompanyService.auth(authCompanyDTO);
+  public ResponseEntity<AuthCompanyResponseDTO> login(@RequestBody AuthCompanyDTO authCompanyDTO) {
+    AuthCompanyResponseDTO token = this.authCompanyService.auth(authCompanyDTO);
     return ResponseEntity.ok(token);
   }
   
