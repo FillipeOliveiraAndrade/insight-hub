@@ -1,5 +1,6 @@
 package br.com.fillipeoliveira.insight_hub.modules.product.services;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ public class ProductService {
 
     product.setCompany(company);
     return this.productRepository.save(product);
+  }
+
+  public List<Product> findAll() {
+    List<Product> products = this.productRepository.findAll();
+    return products;
   }
 }
