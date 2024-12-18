@@ -39,6 +39,7 @@ public class SecurityConfig {
             .requestMatchers("/auth/user").permitAll()
             .requestMatchers("/company").permitAll()
             .requestMatchers("/user").permitAll()
+            .requestMatchers("/product").permitAll()
             .requestMatchers(PERMIT_ALL_LIST).permitAll()
             .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll(); // Permite OPTIONS em todas as rotas
         auth.anyRequest().authenticated();
