@@ -6,6 +6,8 @@ import java.util.UUID;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import br.com.fillipeoliveira.insight_hub.modules.company.models.entities.Company;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,6 +37,7 @@ public class Product {
   private String description;
 
   @Lob
+  @JsonIgnore
   private byte[] images;
 
   @ManyToOne

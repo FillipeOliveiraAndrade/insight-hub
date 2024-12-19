@@ -22,7 +22,7 @@ public class AuthUserService {
   @Autowired
   private PasswordEncoder passwordEncoder;
 
-  public AuthUserResponseDTO auth( AuthUserDTO authUserDTO) {
+  public AuthUserResponseDTO auth(AuthUserDTO authUserDTO) {
     User user = this.userRepository.findByEmail(authUserDTO.email())
         .orElseThrow(() -> new UserNotFoundExcepiton());
 
@@ -35,6 +35,7 @@ public class AuthUserService {
 
     AuthUserResponseDTO tokenDTO = AuthUserResponseDTO
         .builder()
+        .user(user)
         .token(token)
         .build();
 

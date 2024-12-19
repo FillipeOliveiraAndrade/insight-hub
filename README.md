@@ -17,7 +17,7 @@ Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços
 ## Fase 2: Criação de Funcionalidades Básicas
 ### 1. Cadastro de Empresas (com CNPJ) e Usuários
 - ✅ Implementar cadastro de empresas com CNPJ e senha (validação no backend).
-- [ ] Definir permissões diferenciadas (empresas: gerenciar produtos e visualizar avaliações; usuários: apenas avaliar).
+- ✅ Definir permissões diferenciadas (empresas: gerenciar produtos e visualizar avaliações; usuários: apenas avaliar).
 
 ### 2. Cadastro e Gerenciamento de Produtos/Serviços (para Empresas)
 - [ ] Empresas podem criar, editar e excluir seus anúncios de produtos/serviços.

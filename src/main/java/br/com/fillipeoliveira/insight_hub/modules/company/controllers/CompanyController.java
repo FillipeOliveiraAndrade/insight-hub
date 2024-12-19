@@ -14,12 +14,15 @@ import br.com.fillipeoliveira.insight_hub.modules.product.services.ProductServic
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -52,5 +55,11 @@ public class CompanyController {
         productDTO.toEntity(images), UUID.fromString(companyId.toString()));
 
     return ResponseEntity.status(HttpStatus.CREATED).body(result);
+  }
+
+  @GetMapping("/product/{companyId}")
+  public ResponseEntity<List<Product>> getProductOfCompany(@PathVariable UUID companyId) {
+    List<Product> product = this.productService.findProductsByCompanyId(companyId);
+    return ResponseEntity.status(HttpStatus.OK).body(product);
   }
 }

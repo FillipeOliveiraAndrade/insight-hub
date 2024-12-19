@@ -35,6 +35,7 @@ public class AuthCompanyService {
 
     AuthCompanyResponseDTO tokenDTO = AuthCompanyResponseDTO
         .builder()
+        .company(company)
         .token(token)
         .build();
 

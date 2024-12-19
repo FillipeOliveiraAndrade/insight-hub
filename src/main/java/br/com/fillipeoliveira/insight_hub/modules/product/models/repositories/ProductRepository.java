@@ -1,5 +1,6 @@
 package br.com.fillipeoliveira.insight_hub.modules.product.models.repositories;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -8,5 +9,5 @@ import br.com.fillipeoliveira.insight_hub.modules.product.models.entities.Produc
 
 
 public interface ProductRepository extends JpaRepository<Product, UUID> {
-
+  List<Product> findByCompanyId(UUID companyId);
 }
