@@ -20,8 +20,8 @@ Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços
 - ✅ Definir permissões diferenciadas (empresas: gerenciar produtos e visualizar avaliações; usuários: apenas avaliar).
 
 ### 2. Cadastro e Gerenciamento de Produtos/Serviços (para Empresas)
-- [ ] Empresas podem criar, editar e excluir seus anúncios de produtos/serviços.
-- [ ] Adicionar campos obrigatórios: nome, descrição, preço, categoria, imagens.
+- ✅ Empresas podem criar, editar e excluir seus anúncios de produtos/serviços.
+- ✅ Adicionar campos obrigatórios: nome, descrição, preço, categoria, imagens.
 
 ### 3. Interface de Avaliação de Produtos/Serviços (para Usuários)
 - [ ] Usuários podem visualizar os anúncios e avaliar produtos/serviços com notas e comentários.
