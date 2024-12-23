@@ -15,7 +15,7 @@ Esta plataforma conecta empresas e consumidores, permitindo que os usuários ava
 
 ### Backend
 - **Linguagem:** Java
-- **Frameworks:** Spring Boot, Spring Security
+- **Frameworks:** Spring Boot, Spring Security, Swagger
 - **Banco de Dados:** PostgreSQL
 
 ### Frontend
