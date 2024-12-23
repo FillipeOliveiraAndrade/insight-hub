@@ -56,4 +56,8 @@ public class ProductService {
     List<Product> products = this.productRepository.findByCompanyId(companyId);
     return products;
   }
+
+  public void delete(UUID id) {
+    this.productRepository.deleteById(id);
+  }
 }
