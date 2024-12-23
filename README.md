@@ -1,84 +1,85 @@
-# Plano de Desenvolvimento: Plataforma de Feedback de Produtos/Serviços
+# Plataforma de Feedback de Produtos/Serviços
 
-## Objetivo
-Desenvolver uma plataforma onde empresas podem cadastrar seus produtos/serviços e os usuários podem avaliá-los, deixando feedbacks detalhados. A plataforma permitirá interação entre usuários e empresas, proporcionando insights valiosos para as empresas e uma experiência mais rica para os consumidores.
+## Descrição
 
----
+Esta plataforma conecta empresas e consumidores, permitindo que os usuários avaliem produtos e serviços de forma detalhada. O objetivo é fornecer às empresas uma ferramenta prática para cadastrar produtos, gerenciar avaliações e obter insights valiosos com base no feedback dos clientes.
 
-## Fase 1: Planejamento e Estrutura Inicial
-- ✅ Definir a arquitetura do sistema.
-- ✅ Planejar o banco de dados (entidades: Usuário, Empresa, Produto/Serviço, Avaliação).
-- ✅ Escolher as tecnologias a serem utilizadas (Spring Boot, React/Vue.js, PostgreSQL, etc.).
-- ✅ Configuração do ambiente de desenvolvimento local.
-- ✅ Criar repositório no GitHub para controle de versão.
+## Funcionalidades
 
----
+- Cadastro de empresas e produtos.
+- Sistema de autenticação e permissões para usuários e administradores.
+- Avaliações detalhadas de produtos/serviços por parte dos consumidores.
+- Dashboard para visualização de insights e métricas baseadas no feedback.
 
-## Fase 2: Criação de Funcionalidades Básicas
-### 1. Cadastro de Empresas (com CNPJ) e Usuários
-- ✅ Implementar cadastro de empresas com CNPJ e senha (validação no backend).
-- ✅ Definir permissões diferenciadas (empresas: gerenciar produtos e visualizar avaliações; usuários: apenas avaliar).
+## Tecnologias Utilizadas
 
-### 2. Cadastro e Gerenciamento de Produtos/Serviços (para Empresas)
-- ✅ Empresas podem criar, editar e excluir seus anúncios de produtos/serviços.
-- ✅ Adicionar campos obrigatórios: nome, descrição, preço, categoria, imagens.
+### Backend
+- **Linguagem:** Java
+- **Frameworks:** Spring Boot, Spring Security
+- **Banco de Dados:** PostgreSQL
 
-### 3. Interface de Avaliação de Produtos/Serviços (para Usuários)
-- [ ] Usuários podem visualizar os anúncios e avaliar produtos/serviços com notas e comentários.
-- [ ] Implementar a possibilidade de adicionar fotos nos comentários (se relevante).
+### Frontend
+- **Linguagem:** TypeScript
+- **Framework:** Vue.js
 
----
+### Infraestrutura
+- **Containerização:** Docker
 
-## Fase 3: Funcionalidades Avançadas e Melhorias
-### 1. Painel Administrativo (para Empresas)
-- [ ] Empresas podem visualizar avaliações de seus produtos, responder a comentários e gerenciar publicações.
-- [ ] Permitir download de relatórios de avaliação (em CSV ou PDF).
+## Desafios e Aprendizados
 
-### 2. Filtragem e Busca de Produtos
-- [ ] Implementar filtros por categoria, avaliação mínima, e data de publicação.
-- [ ] Desenvolver funcionalidade de busca por nome de produto/serviço.
+- **Integração Backend e Frontend:** Implementar a comunicação eficiente e segura entre o backend e o frontend foi um dos maiores desafios, especialmente ao trabalhar com autenticação e controle de permissões usando Spring Security.
+- **Vue.js com TypeScript:** Adquirir proficiência na construção de interfaces dinâmicas e tipadas foi um aprendizado valioso.
+- **Docker:** A containerização proporcionou um ambiente de desenvolvimento mais consistente e simplificou o processo de implantação.
 
----
+## Repositórios
 
-## Fase 4: Polimento e Testes
-### 1. Testes de Funcionalidade
-- [ ] Testar fluxos de cadastro, login, criação de anúncios, avaliação de produtos, resposta às avaliações e notificações.
-- [ ] Testar performance do sistema.
+- **Backend:** [GitHub - insight-hub](https://github.com/FillipeOliveiraAndrade/insight-hub)
+- **Frontend:** [GitHub - insight-hub-front](https://github.com/FillipeOliveiraAndrade/insight-hub-front)
 
-### 2. Testes de Interface e UX
-- [ ] Garantir interface intuitiva para empresas e usuários.
-- [ ] Realizar testes de usabilidade com usuários.
+## Nota sobre o Frontend
 
-### 3. Deploy
-- [ ] Realizar deploy do backend (Heroku ou Vercel).
-- [ ] Hospedar frontend (Netlify ou Vercel).
-- [ ] Configurar domínio e SSL.
+Embora a aplicação conte com um frontend funcional desenvolvido em Vue.js com TypeScript, o foco principal deste projeto é o backend. Por isso, o frontend foi mantido intencionalmente com um visual clean e simples, priorizando a funcionalidade e integração com as APIs fornecidas pelo backend.
 
----
+## Como Executar o Projeto
 
-## Fase 5: Lançamento e Feedback
-### 1. Lançamento Beta
-- [ ] Disponibilizar a plataforma para um grupo seleto de empresas e usuários.
-- [ ] Coletar feedback sobre usabilidade, performance e funcionalidades.
+### Pré-requisitos
 
-### 2. Correções e Ajustes
-- [ ] Corrigir bugs e melhorar funcionalidades com base no feedback.
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-### 3. Marketing e Divulgação
-- [ ] Preparar materiais de marketing para divulgar a plataforma.
-- [ ] Implementar estratégias para atrair empresas.
+- **Docker** (para a containerização)
+- **Node.js** (para executar o frontend)
+- **Java 17+** (para o backend)
 
----
+### Passos
 
-## Fase 6: Melhorias e Expansão
-- [ ] Implementar novos recursos conforme necessidades dos usuários.
-- [ ] Explorar formas de monetização (planos premium, taxas por destaque de produtos, etc.).
-- [ ] Continuar aprimorando a plataforma (desempenho, segurança, UX).
+1. Clone os repositórios:
+   ```bash
+   git clone https://github.com/FillipeOliveiraAndrade/insight-hub
+   git clone https://github.com/FillipeOliveiraAndrade/insight-hub-front
+   ```
 
----
+2. Suba os containers com Docker (se configurado):
+   ```bash
+   docker-compose up
+   ```
 
-## Diagrama ER
+3. Execute o backend:
+   ```bash
+   cd insight-hub
+   ./mvnw spring-boot:run
+   ```
 
-Este é o diagrama ER do projeto para referência:
+4. Execute o frontend:
+   ```bash
+   cd insight-hub-front
+   npm install
+   npm run serve
+   ```
 
-![er_diagram](https://github.com/user-attachments/assets/ccf85164-ec19-425f-a06e-09af5ae77654)
+5. Acesse a aplicação no navegador:
+   - **Frontend:** `http://localhost:8080`
+   - **API:** `http://localhost:8080`
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma _issue_ ou enviar um _pull request_.
